@@ -1,9 +1,9 @@
 # Copyright 2023 Nordic Semiconductor ASA
 
-pkgname=compiler-rt-armv7
+pkgname=compiler-rt-armv7m
 pkgver=16.0.6
 pkgrel=1
-pkgdesc="compiler-rt library for ARMv7 targets"
+pkgdesc="compiler-rt library for ARMv7m targets"
 arch=('x86_64')
 url="https://clang.llvm.org/"
 license=('custom:Apache 2.0 with LLVM Exception')
