@@ -1,7 +1,7 @@
 # Copyright 2023 Nordic Semiconductor ASA
 
 pkgname=compiler-rt-armv7m
-pkgver=16.0.6
+pkgver=17.0.6
 pkgrel=1
 pkgdesc="compiler-rt library for ARMv7m targets"
 arch=('x86_64')
@@ -12,7 +12,7 @@ makedepends=('cmake' 'ninja')
 options=('staticlibs' '!strip')
 _source_base=https://github.com/llvm/llvm-project/releases/download/llvmorg-$pkgver
 source=($_source_base/llvm-project-$pkgver.src.tar.xz)
-sha256sums=('ce5e71081d17ce9e86d7cbcfa28c4b04b9300f8fb7e78422b1feb6bc52c3028e')
+sha256sums=('58a8818c60e6627064f312dbf46c02d9949956558340938b71cf731ad8bc0813')
 
 build() {
   mkdir -p llvm-project-$pkgver.src/build
@@ -46,6 +46,6 @@ build() {
 package() {
   cd llvm-project-$pkgver.src/build
 
-  mkdir -p "$pkgdir/usr/lib/clang/16/lib/baremetal"
-  install lib/baremetal/libclang_rt.builtins-armv7m.a "$pkgdir/usr/lib/clang/16/lib/baremetal/libclang_rt.builtins-armv7m.a"
+  mkdir -p "$pkgdir/usr/lib/clang/17/lib/baremetal"
+  install lib/baremetal/libclang_rt.builtins-armv7m.a "$pkgdir/usr/lib/clang/17/lib/baremetal/libclang_rt.builtins-armv7m.a"
 }
